@@ -35,3 +35,13 @@ And get a javax.persistence.Query object:
 `Query query = uniqueParans.getJpaQuery(entity, entityManager);`
 
 See UniqueParansJpaQueryTest object to get a full example.
+
+###Maven
+Donwload the project from here and add in your pom.xml:
+```XML
+<dependency>
+   <groupId>br.com.gbvbahia</groupId>
+   <artifactId>Unique</artifactId>
+   <version>1.0</version>
+ </dependency>
+```
