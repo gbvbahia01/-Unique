@@ -43,5 +43,5 @@ Donwload the project from here and add in your pom.xml:
    <groupId>br.com.gbvbahia</groupId>
    <artifactId>Unique</artifactId>
    <version>1.0</version>
- </dependency>
+</dependency>
 ```
