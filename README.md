@@ -26,10 +26,12 @@ public class SubCategory {
     @NotNull
     private Category category;
     }
-    ```
-    
-    Instantiate a UniqueParans object:
-    `UniqueParans instance = new UniqueParans();`
-    And get a javax.persistence.Query object:
-    `Query query = uniqueParans.getJpaQuery(entity, entityManager);`
-    See UniqueParansJpaQueryTest object to get a full example.
+```
+
+Instantiate a UniqueParans object:
+`UniqueParans instance = new UniqueParans();`
+
+And get a javax.persistence.Query object:
+`Query query = uniqueParans.getJpaQuery(entity, entityManager);`
+
+See UniqueParansJpaQueryTest object to get a full example.
