@@ -3,7 +3,7 @@ Create a JPA query to consult for unique fields.
 
 ##Using
 To use: annote your entities using @Unique like:
-```
+```java
 @Entity
 @Table(name = "sub_category", schema = "products", uniqueConstraints = {
     @UniqueConstraint(columnNames = {"name", "category_id"})})
@@ -25,18 +25,14 @@ public class SubCategory {
     @JoinColumn(name = "category_id", referencedColumnName = "ID")
     @NotNull
     private Category category;
+    }```
+
+
+
+
     
-    ...
-    }
-    ```
     Instantiate a UniqueParans object:
-    ```
-    UniqueParans instance = new UniqueParans();
-    ```
-    
+    `UniqueParans instance = new UniqueParans();`
     And get a javax.persistence.Query object:
-    ```
-    Query query = uniqueParans.getJpaQuery(entity, entityManager);
-    ```
-    
+    `Query query = uniqueParans.getJpaQuery(entity, entityManager);`
     See UniqueParansJpaQueryTest object to get a full example.
