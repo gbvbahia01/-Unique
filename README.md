@@ -25,11 +25,8 @@ public class SubCategory {
     @JoinColumn(name = "category_id", referencedColumnName = "ID")
     @NotNull
     private Category category;
-    }```
-
-
-
-
+    }
+    ```
     
     Instantiate a UniqueParans object:
     `UniqueParans instance = new UniqueParans();`
