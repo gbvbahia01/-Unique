@@ -23,6 +23,9 @@ public class UniqueParans {
 
    public Query getJpaQuery(Object uniqueObj, EntityManager manager){
        Map<String, Object> map = getMapQuery(uniqueObj);
+       if(map == null || map.isEmpty()){
+           return null;
+       }
        String queryString = map.get(QUERY).toString();
        map.remove(QUERY);
        Query query = manager.createQuery(queryString);
@@ -35,11 +38,11 @@ public class UniqueParans {
     
     public Map<String, Object> getMapQuery(Object uniqueObj) {
         try {
+            Map<String, Object> toReturn = new HashMap<>();
             UniqueMap modelHasUnique = getObjHasUnique(uniqueObj);
             if (modelHasUnique == null || modelHasUnique.objHasAnnotation == null) {
-                return null;
+                return toReturn;
             }
-            Map<String, Object> toReturn = new HashMap<>();
             Object objUnique = modelHasUnique.objHasAnnotation;
             Unique u = null;
             for(Annotation annotation :  objUnique.getClass().getDeclaredAnnotations()){
