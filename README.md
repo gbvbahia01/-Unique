@@ -37,7 +37,7 @@ And get a javax.persistence.Query object:
 See UniqueParansJpaQueryTest object to get a full example.
 
 ###Maven
-Donwload the project from here and add in your pom.xml:
+Donwload the project from here, execute mvn install in same folder and add in your pom.xml:
 ```XML
 <dependency>
    <groupId>br.com.gbvbahia</groupId>
